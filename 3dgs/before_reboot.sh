@@ -5,8 +5,8 @@ sudo apt install xfce4 xrdp htop git tmux -y
 
 # install miniconda =============================
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda-installer.sh
-bash ./miniconda-installer.sh
-rm miniconda-installer.sh -u
+bash ./miniconda-installer.sh -u
+rm miniconda-installer.sh
 
 # install cuda11.8 =============================
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-ubuntu2204.pin
