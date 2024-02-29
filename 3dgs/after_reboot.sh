@@ -1,12 +1,12 @@
 # download dataset =============================
-sudo mkdir /data/dataset
-sudo chmod 777 -R /data/dataset
-ln -s /data/dataset ~/Desktop/dataset
-cd ~/Desktop/dataset
-wget https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/datasets/input/tandt_db.zip
-wget -O dnerf_db.zip https://www.dropbox.com/s/0bf6fl0ye2vz3vr/data.zip
-unzip tandt_db.zip
-unzip dnerf_db.zip
+# sudo mkdir /data/dataset
+# sudo chmod 777 -R /data/dataset
+# ln -s /data/dataset ~/Desktop/dataset
+# cd ~/Desktop/dataset
+# wget https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/datasets/input/tandt_db.zip
+# wget -O dnerf_db.zip https://www.dropbox.com/s/0bf6fl0ye2vz3vr/data.zip
+# unzip tandt_db.zip
+# unzip dnerf_db.zip
 
 # install chrome browser =============================
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
