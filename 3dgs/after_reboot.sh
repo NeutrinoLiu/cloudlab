@@ -19,6 +19,7 @@ cd ~/Desktop
 git clone https://github.com/graphdeco-inria/gaussian-splatting --recursive
 cd gaussian-splatting
 conda env create --file environment.yml
+conda init
 conda activate gaussian_splatting
 conda install tensorboard -y 
 
