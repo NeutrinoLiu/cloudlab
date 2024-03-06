@@ -23,7 +23,7 @@ sudo apt-get install \
     libceres-dev -y
 
 cd ~/Desktop
-git clone https://github.com/colmap/colmap.git
+git clone --depth 1 --branch 3.8 https://github.com/colmap/colmap # latest doesnt work
 cd colmap
 mkdir build
 cd build
