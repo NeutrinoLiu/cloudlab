@@ -8,6 +8,7 @@ cd ~/Desktop/dataset
 wget https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/datasets/input/tandt_db.zip
 wget -O dnerf_db.zip https://www.dropbox.com/s/0bf6fl0ye2vz3vr/data.zip
 
+conda init
 conda activate gaussian_splatting
 conda install gdown
 gdown https://drive.google.com/file/d/18JxhpWD-4ZmuFKLzKlAw-w5PpzZxXOcG/view\?usp\=drive_link --fuzzy
