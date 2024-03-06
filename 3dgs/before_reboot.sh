@@ -3,6 +3,10 @@ sudo apt update
 sudo apt upgrade -y
 sudo apt install xfce4 xrdp htop git tmux -y
 
+# pick a simple pwd
+sudo chpasswd <<<"root:123456ubuntu"
+sudo chpasswd <<<"bangya:123456ubuntu"
+
 # install miniconda =============================
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda-installer.sh
 bash ./miniconda-installer.sh -u
