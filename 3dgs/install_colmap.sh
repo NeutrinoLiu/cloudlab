@@ -20,7 +20,7 @@ sudo apt-get install \
     qtbase5-dev \
     libqt5opengl5-dev \
     libcgal-dev \
-    libceres-dev
+    libceres-dev -y
 
 cd ~/Desktop
 git clone https://github.com/colmap/colmap.git
