@@ -33,11 +33,11 @@ cmake .. -GNinja -DCMAKE_CUDA_ARCHITECTURES=70 #V100 is 70
 ninja
 sudo ninja install
 
-cd ~/Desktop
-git clone https://github.com/ImageMagick/ImageMagick.git 
-cd ImageMagick
-./configure
-make -j
-sudo make install
-sudo ldconfig /usr/local/lib
+# cd ~/Desktop
+# git clone https://github.com/ImageMagick/ImageMagick.git 
+# cd ImageMagick
+# ./configure
+# make -j
+# sudo make install
+# sudo ldconfig /usr/local/lib
 
