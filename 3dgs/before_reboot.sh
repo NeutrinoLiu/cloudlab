@@ -10,17 +10,19 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda-installer.sh
 bash ./miniconda-installer.sh -u -b
 rm miniconda-installer.sh
+source ~/miniconda3/etc/profile.d/conda.sh
 conda init zsh
 
 # install cuda11.8 =============================
-sudo apt install nvidia-driver-535
+sudo apt install nvidia-driver-535 -y
 wget https://developer.download.nvidia.com/compute/cuda/11.8.0/local_installers/cuda_11.8.0_520.61.05_linux.run
 sudo sh ./cuda_11.8.0_520.61.05_linux.run --toolkit --samples --silent --override
 echo 'export PATH=/usr/local/cuda-11.8/bin${PATH:+:${PATH}}' >> ~/.zshrc
 echo 'export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}' >> ~/.zshrc
 echo 'export PATH=/usr/local/cuda-11.8/bin${PATH:+:${PATH}}' >> ~/.bashrc
 echo 'export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}' >> ~/.bashrc
-
+source ~/.zshrc
+rm ./cuda_11.8.0_520.61.05_linux.run
 
 # reboot after =============================
 sudo reboot
