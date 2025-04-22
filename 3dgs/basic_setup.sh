@@ -1,7 +1,7 @@
 # desktop gui =============================
 sudo apt update
 sudo apt upgrade -y
-sudo apt install xfce4 xrdp htop git tmux -y
+sudo apt install xfce4 xrdp htop git tmux nano unzip -y
 
 # install omz
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
@@ -15,7 +15,8 @@ conda init zsh
 
 # install cuda11.8 =============================
 sudo bash install_nv_driver.sh
-sudo bash install_cuda_118.sh
+# sudo bash install_cuda_118.sh
+conda install -c nvidia/label/cuda-11.8.0 cuda-toolkit --override-channels
 
 # reboot after =============================
 sudo reboot
