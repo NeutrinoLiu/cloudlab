@@ -10,12 +10,9 @@ import geni.portal as portal
 import geni.rspec.pg as pg
 import geni.rspec.emulab as emulab
 
-
-# imageList = [
-#     ('urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU22-64-STD', 'UBUNTU 22.04'),
-# ]
 imageList = [
-    ('urn:publicid:IDN+clemson.cloudlab.us+image+emulab-ops//UBUNTU22-64-ARM9', 'UBUNTU 22.04'),
+    ('urn:publicid:IDN+clemson.cloudlab.us+image+emulab-ops//UBUNTU22-64-ARM9', 'UBUNTU-ARM9'),
+    ('urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU22-64-STD', 'UBUNTU-X64'),
 ]
 
 ds_urn = "urn:publicid:IDN+clemson.cloudlab.us:wings-bangya-pg0+ltdataset+3D_vision"
