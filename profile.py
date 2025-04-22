@@ -1,8 +1,9 @@
-"""ubuntu22_gpu
+"""
+UBUNTU22 + dataset 3DV
 
 Instructions:
 
-using gpu node
+UBUNTU22 + dataset 3DV
 """
 
 import geni.portal as portal
@@ -10,27 +11,23 @@ import geni.rspec.pg as pg
 import geni.rspec.emulab as emulab
 
 
+# imageList = [
+#     ('urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU22-64-STD', 'UBUNTU 22.04'),
+# ]
 imageList = [
-    ('urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU22-64-STD', 'UBUNTU 22.04'),
+    ('urn:publicid:IDN+clemson.cloudlab.us+image+emulab-ops//UBUNTU22-64-ARM9', 'UBUNTU 22.04'),
 ]
 
-# gpuList = [
-# ('c240g5', 'c240g5-P100'),
-# ('c4130', 'c4130-Tesla V100'),
-# ('d7525', 'd7525-Ampre A30'),
-# ('d8545', 'd8545-HGX A100'),
-# ('r7525', 'r7525-GV100GL')
-# ]
+ds_urn = "urn:publicid:IDN+clemson.cloudlab.us:wings-bangya-pg0+ltdataset+3D_vision"
 
 pc = portal.Context()
 pc.defineParameter("clientCount", "Number of NFS clients",
-                   portal.ParameterType.INTEGER, 1)
+                   portal.ParameterType.INTEGER, 0)
 pc.defineParameter("os_image", "OS image", portal.ParameterType.IMAGE, imageList[0], imageList)
-pc.defineParameter("node_hw", "GPU node type", portal.ParameterType.NODETYPE, "d7525")
-pc.defineParameter("data_size", "GPU node local storage size", portal.ParameterType.STRING, "512GB")
+pc.defineParameter("node_hw", "GPU node type", portal.ParameterType.NODETYPE, "nvidiags")
+pc.defineParameter("data_size", "GPU node local storage size", portal.ParameterType.STRING, "1024GB")
 pc.defineParameter("dataset", "Your dataset URN",
-                   portal.ParameterType.STRING,
-                   "urn:publicid:IDN+wisc.cloudlab.us:wings-bangya-pg0+ltdataset+NeRF_and_3DGS")
+                   portal.ParameterType.STRING, ds_urn)
 params = pc.bindParameters()
 request = pc.makeRequestRSpec()
 
