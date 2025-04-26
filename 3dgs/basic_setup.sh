@@ -12,6 +12,12 @@ bash ./miniconda-installer.sh -u -b
 rm miniconda-installer.sh
 source ~/miniconda3/etc/profile.d/conda.sh
 conda init zsh
+conda update -n base conda
+conda install -n base conda-libmamba-solver
+conda config --set solver libmamba
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+
 
 # install cuda11.8 =============================
 sudo bash install_nv_driver.sh
